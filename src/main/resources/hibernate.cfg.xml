@@ -7,9 +7,7 @@
 
     <!-- Database connection settings -->
     <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="connection.url">jdbc:mysql://10.7.0.245:3306/trunk_svetoslav</property>
-    <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">q</property>
+    <property name="connection.url">jdbc:mysql://192.168.100.10:3306</property>
 
     <!-- JDBC connection pool (use the built-in) -->
     <property name="connection.pool_size">1</property>
@@ -25,21 +23,10 @@
 
     <!-- Echo all executed SQL to stdout -->
     <property name="show_sql">true</property>
-    <mapping class="domain.AssetPublishingChannelsBean"/>
+    <mapping class="domain.CurrencyBean"/>
+    <mapping class="domain.DealBean"/>
+    <mapping class="domain.MarketBean"/>
+    <mapping class="domain.MarketCurrencyPairBean"/>
 
-    <!-- Drop and re-create the database schema on startup -->
-    <!--<property name="hbm2ddl.auto">update</property>-->
-
-    <!--<mapping resource="domain/AssetPublishingChannelsBean.java"/>-->
-    <mapping class="domain.PersonTableTmpBean"/>
-
-
-    <!--<property name="connection.url"/>-->
-    <!--<property name="connection.driver_class"/>-->
-    <!-- <property name="connection.username"/> -->
-    <!-- <property name="connection.password"/> -->
-
-    <!-- DB schema will be updated if needed -->
-    <!-- <property name="hbm2ddl.auto">update</property> -->
   </session-factory>
 </hibernate-configuration>
